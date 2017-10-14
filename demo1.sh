@@ -1,5 +1,13 @@
 aws configure list
 
+#create a new key-pair for ec2
+
+aws ec2 create-key-pair --key-name MyKeyPair --query 'KeyMaterial' --output text > MyKeyPair.pem
+
+
+
+
+
 #Different output examples
 aws ec2 describe-instances --output text
 
